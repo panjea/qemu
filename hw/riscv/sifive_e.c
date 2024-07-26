@@ -68,7 +68,8 @@ static const MemMapEntry sifive_e_memmap[] = {
     [SIFIVE_E_DEV_QSPI2] =    { 0x10034000,     0x1000 },
     [SIFIVE_E_DEV_PWM2] =     { 0x10035000,     0x1000 },
     [SIFIVE_E_DEV_XIP] =      { 0x20000000, 0x20000000 },
-    [SIFIVE_E_DEV_DTIM] =     { 0x80000000,     0x4000 }
+    //[SIFIVE_E_DEV_DTIM] =     { 0x80000000,     0x4000 }   //real hardware has 16K
+    [SIFIVE_E_DEV_DTIM] =     { 0x80000000,     0x10000000 } //allow 256MB instead of 16K
 };
 
 static void sifive_e_machine_init(MachineState *machine)
